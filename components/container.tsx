@@ -1,9 +1,9 @@
 "use client";
 import constants from "@/util/constants";
 import { useQuery } from "@tanstack/react-query";
-import { Product, Root } from "../page";
+import { Product, Root } from "../app/page";
 import Card from "./card";
-import classnames from "../page.module.scss";
+import classnames from "../app/page.module.scss";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import ErrorRenderer from "./error";
@@ -71,9 +71,25 @@ export default function Container() {
           ) : null}
         </AnimatePresence>
         {isPending || error
-          ? Array.from({ length: 8 }).map((_, i) => <div key={i}>{i}</div>)
+          ? Array.from({ length: 8 }).map((_, i) => (
+              <Card
+                isSqueleton
+                addItem={() => {}}
+                brand=""
+                key={i}
+                id={i}
+                name=""
+                createdAt=""
+                photo=""
+                price=""
+                toggleSidebar={() => {}}
+                updatedAt=""
+                description=""
+              />
+            ))
           : data?.products.map((i) => (
               <Card
+                isSqueleton={false}
                 {...i}
                 key={i.id}
                 toggleSidebar={toggleSidebar}

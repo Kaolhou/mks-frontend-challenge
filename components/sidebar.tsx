@@ -1,9 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Product } from "../page";
-import classnames from "../page.module.scss";
-import { montserrat } from "../layout";
+import { Product } from "../app/page";
+import classnames from "../app/page.module.scss";
+import { montserrat } from "../app/layout";
 import { CloseButton } from "./error";
 import Item from "./item";
 

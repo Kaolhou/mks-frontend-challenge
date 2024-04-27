@@ -1,6 +1,6 @@
-import { Product } from "../page";
+import { Product } from "../app/page";
 import { CloseButton } from "./error";
-import classnames from "../page.module.scss";
+import classnames from "../app/page.module.scss";
 import { ItemWithAmount } from "./sidebar";
 
 interface ItemProps {

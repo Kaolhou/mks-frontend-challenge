@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import classnames from "../page.module.scss";
+import classnames from "../app/page.module.scss";
 import React from "react";
 
 interface PathProps {
@@ -38,7 +38,10 @@ export default function ErrorRenderer({
       exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
       className={classnames["error_banner"]}
     >
-      <button onClick={() => setErrorNotification("")} className="close">
+      <button
+        onClick={() => setErrorNotification("")}
+        className={classnames["close"]}
+      >
         <CloseButton />
       </button>
       {message}

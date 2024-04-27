@@ -1,5 +1,5 @@
 import OpenCard from "./open-card";
-import classnames from "../page.module.scss";
+import classnames from "../app/page.module.scss";
 interface HeaderProps {
   amount: number;
   onClick: () => void;

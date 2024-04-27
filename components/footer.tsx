@@ -1,4 +1,4 @@
-import classnames from "../page.module.scss";
+import classnames from "../app/page.module.scss";
 
 export default function Footer() {
   return (

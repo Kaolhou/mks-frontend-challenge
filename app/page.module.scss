@@ -47,6 +47,22 @@
   }
 }
 
+.pulse {
+  $from: rgb(255, 255, 255);
+  $to: scale-color($from, $lightness: -10%);
+
+  background-color: #{$from};
+  animation: pulse 1.2s alternate-reverse infinite;
+  @keyframes pulse {
+    0% {
+      background-color: #{$from};
+    }
+    100% {
+      background-color: #{$to};
+    }
+  }
+}
+
 .header {
   background-color: var(--color);
   height: 100px;
@@ -107,8 +123,23 @@
 }
 .error_banner {
   position: fixed;
-  background-color: red;
+  background-color: #ed4337;
+  padding: 18px;
+  border-radius: 8px;
   top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+    padding: 0px;
+    cursor: pointer;
+    border: none;
+  }
 }
 
 .name-price {
