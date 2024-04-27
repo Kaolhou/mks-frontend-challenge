@@ -1,6 +1,5 @@
 import Container from "../components/container";
 import Footer from "../components/footer";
-import Sidebar from "../components/sidebar";
 export interface Root {
   products: Product[];
   count: number;
