@@ -1,7 +1,6 @@
-"use-client";
-import constants from "@/util/constants";
-import { useQuery } from "@tanstack/react-query";
-import Card from "./_card";
+import Container from "./_components/container";
+import Footer from "./_components/footer";
+import Sidebar from "./_components/sidebar";
 export interface Root {
   products: Product[];
   count: number;
@@ -12,26 +11,18 @@ export interface Product {
   name: string;
   brand: string;
   description: string;
-  price: number;
+  photo: string;
+  price: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 const Home = function () {
   return (
     <div>
-      <Card />
+      <Container />
+      <Footer />
     </div>
   );
 };
 export default Home;
-
-// export const getServersideProps: GetServerSideProps<Root> = async function () {
-//   const data = await fetch(`${constants.BASE_URL}/products`);
-//   const json = (await data.json()) as Root;
-//   console.log("oi");
-
-//   return {
-//     props: {
-//       ...json,
-//     },
-//   };
-// };

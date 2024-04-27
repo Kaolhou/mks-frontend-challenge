@@ -1,0 +1,269 @@
+.card {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.37) 5px 5px 15px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  width: 218px;
+  height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & span.img-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+  button {
+    &:hover {
+      background-color: lighten($color: #0f52ba, $amount: 5);
+    }
+    background-color: var(--color);
+    transition: 0.3s;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 138px;
+    max-width: 100%;
+    margin: 5px 0;
+  }
+}
+
+.header {
+  background-color: var(--color);
+  height: 100px;
+  display: flex;
+  padding: 0 50px;
+  margin-bottom: 10px;
+  & > button {
+    background-color: #fff;
+    max-height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: darken($color: #fff, $amount: 10);
+    }
+  }
+  & > h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    & > span {
+      margin-left: 5px;
+      font-weight: 300;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin-top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #eee;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.error_banner {
+  position: fixed;
+  background-color: red;
+  top: 10px;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+
+  span {
+    background-color: #373737;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    max-height: 26px;
+    padding: 5px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    gap: 20px;
+    text-wrap: wrap;
+  }
+}
+.description {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 0 20px;
+}
+
+.aside {
+  --padding: 10px;
+  background-color: var(--color);
+  height: 100px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: calc(100vh - var(--padding));
+  padding-top: 10px;
+  color: white;
+  box-shadow: #373737 10px 10px 30px;
+}
+
+.button {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
+  transition: 0.3s;
+  &:hover {
+    background-color: lighten($color: #000000, $amount: 10);
+  }
+}
+.button-card {
+  @extend .button;
+  position: absolute;
+  top: -7px; /* Para o botão ficar fora da div */
+  right: -7px;
+  z-index: 1;
+}
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  right: 0;
+  color: #000000;
+  align-items: center;
+  position: relative;
+
+  img {
+    max-width: 100px;
+    padding: 10px 0;
+  }
+}
+.plus-less {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+
+  span,
+  button {
+    width: 20px;
+    user-select: none;
+    text-align: center;
+  }
+
+  span {
+    color: #000000;
+    cursor: default;
+  }
+  :nth-child(1) {
+    border-right: 1px solid #bfbfbf;
+  }
+  :nth-child(3) {
+    border-left: 1px solid #bfbfbf;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+  }
+}
+.itens-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+.result {
+  button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    font-weight: 700;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: lighten($color: #000000, $amount: 5);
+    }
+  }
+}
+.total {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 28px;
+}
