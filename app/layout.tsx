@@ -1,9 +1,8 @@
-// import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.scss";
 import QueryProvider from "./_provider/query-provider";
 
-export const montserrat = Montserrat({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["500", "300", "400", "600"],
 });

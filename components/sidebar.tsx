@@ -3,7 +3,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Product } from "../app/page";
 import classnames from "../app/page.module.scss";
-import { montserrat } from "../app/layout";
 import { CloseButton } from "./error";
 import Item from "./item";
 
@@ -29,7 +28,7 @@ export default function Sidebar({
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{ duration: 0.4 }}
-          className={classnames["aside"] + " " + montserrat.className}
+          className={classnames["aside"]}
         >
           <div>
             <span

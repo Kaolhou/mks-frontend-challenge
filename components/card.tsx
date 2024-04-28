@@ -1,6 +1,5 @@
 "use client";
 
-import { montserrat } from "../app/layout";
 import { Product, Root } from "../app/page";
 import classnames from "../app/page.module.scss";
 
@@ -57,7 +56,6 @@ export default function Card(props: CardProps) {
           props.addItem(props, 1);
           props.toggleSidebar(true);
         }}
-        className={montserrat.className}
       >
         {props.isSqueleton ? (
           <>---------</>
